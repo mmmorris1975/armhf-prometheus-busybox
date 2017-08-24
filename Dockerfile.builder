@@ -1,4 +1,4 @@
-FROM armhf/debian:jessie
+FROM arm32v7/debian:stretch
 
 RUN \
     apt-get update && apt-get install -y \
