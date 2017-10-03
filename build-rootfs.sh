@@ -3,7 +3,7 @@
 NAME=armhf-prom-busybox
 IMAGE=${NAME}-rootfs
 
-docker build -t ${IMAGE}:latest -f Dockerfile.builder .
+docker build -t ${IMAGE}:latest -f Dockerfile.builder $@ .
 docker run -d --name ${NAME} ${IMAGE}:latest
 docker cp ${NAME}:/rootfs/ rootfs
 
